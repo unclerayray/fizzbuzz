@@ -6,10 +6,10 @@ import org.junit.Test;
 
 public class FizzBuzzPlusServiceTest {
 
-    public FizzBuzzPlusService fizzBuzzPlusService;
+    private FizzBuzzPlusService fizzBuzzPlusService;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         fizzBuzzPlusService = new FizzBuzzPlusService();
     }
 
@@ -25,6 +25,7 @@ public class FizzBuzzPlusServiceTest {
 
         Assert.assertEquals("FizzBuzz\n", fizzBuzzPlusService.fizzBuzz(30));
         Assert.assertEquals("FizzBuzz\n", fizzBuzzPlusService.fizzBuzz(35));
+        Assert.assertEquals("Buzz\n", fizzBuzzPlusService.fizzBuzz(100));
     }
 
     @Test
